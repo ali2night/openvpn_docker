@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  openvpn:
+    build: image
+    restart: always
+    ports:
+      - "1194:1194"
+    environment:
+     - OVPN_DATA="ovpn-data"
+    tty: True
